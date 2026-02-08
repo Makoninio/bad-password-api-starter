@@ -22,7 +22,7 @@ async function updatePassword() {
     let group2 = document.querySelector("input[name=group2]:checked");
     console.log(group1, group2);
     // 👉 add code inside this function (from Chapter 9) ...
-    let url = "https://bad-password-api.vercel.app/api/common";
+    let url = "/api/custom?params=" + group1.value + "," + group2.value;
     await fetch(url)
         .then((response) => response.json())
         .then((json) => {
